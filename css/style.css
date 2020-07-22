@@ -13,9 +13,7 @@ header, footer {
 	color: white;
 }
 
-h1,
-h2,
-footer{
+h1, h2, footer{
 	text-align: center;
 }
 
@@ -96,18 +94,17 @@ button {
 	padding: 1em 0;
 }
 
-.vertis-north,
-.cloverleaf {
+.container {
 	text-align: center;
 	position: relative;
 	width: 100%;
+	margin: 0 auto 3em auto;
 }
 
 .home-img {
 	display: block;
 	width: 100%;
 	height: auto;
-	/* padding-bottom: 2em; */
 }
 
 .overlay {
@@ -123,8 +120,7 @@ button {
 	background: rgba(0,0,0,.5);
 }
 
-.vertis-north:hover .overlay,
-.cloverleaf:hover .overlay {
+.container:hover .overlay{
 	opacity: 1;
 }
 
@@ -178,8 +174,12 @@ button {
 		padding-top: 2.8em;
 	}
 
-	.caption {
-		max-width: 74%;
+	.container {
+		width: 70%;
+	}
+
+	.text {
+		font-size: 1.8em;
 	}
 
 	.room {
@@ -206,18 +206,33 @@ button {
 	}
 }
 
+@media (min-width: 960px){
+	main {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.landing {
+		width: 100%;
+	}
+
+	.container {
+		width: 45%;
+	}
+
+	.text {
+		font-size: 1.8em;
+	}
+}
+
 @media (min-width: 1024px) {
 	.container {
-		width: 90%;
-		margin: 0 auto;
+		width: 40%;
 	}
 
 	.wrapper {
 		padding-left: 3em;
-	}
-
-	.landing h2 {
-		text-align: left;
 	}
 
 	.welcome {
