@@ -96,20 +96,6 @@ button {
 	margin-bottom: 10px;
 }
 
-/* .main-header {
-	background-color: #b42d33;
-	max-height: 100%;
-	margin-top:-1.5em;
-} */
-/*
-.main-nav a {
-	display: block;
-	text-align: center;
-	padding: 10px 20px;
-	color: white;
-	text-transform: uppercase;
-} */
-
 .landing {
 	margin: .5em;
 }
@@ -165,8 +151,9 @@ button {
 	padding-top: 1em;
 }
 
-.welcome img {
+section img {
 	padding-top: 1em;
+	max-width: 100%;
 }
 
 .room {
