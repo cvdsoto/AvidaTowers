@@ -113,9 +113,18 @@ main {
 section {
 	margin-bottom: 2.5em;
 }
+
+section p {
+	text-align: justify;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
 section img {
 	padding-top: 1em;
 	max-width: 100%;
+	display: block;
+	margin: 0 auto;
 }
 
 /* Welcome */
@@ -123,23 +132,19 @@ section img {
 	padding-top: 1em;
 }
 
-/* Location */
-.loc_photo{
-	text-align: center;
+.price,
+.contact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 /* Room */
 .price {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	align-items: flex-end;
 }
 
 .room {
-	/* margin: 0 auto;
-	max-width: 50%;
-	text-align: center; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -158,6 +163,9 @@ section img {
 }
 
 /* Contact us */
+.contact {
+	align-items: center;
+}
 form {
 	max-width: 100%;
 	padding: 10px 20px;
@@ -173,7 +181,6 @@ input[type="tel"],
 textarea {
 	margin-bottom: 15px;
 	width: 100%;
-	/*height: auto;*/
 	font-size: 1.125em;
 	border-radius: 5px;
 	border: none;
@@ -197,21 +204,6 @@ input[type="submit"] {
 }
 
 @media (min-width: 640px) {
-	/* h1 {
-		text-align: left;
-		padding-left: 1em;
-	}
-
-	.main-nav {
-		float: right;
-	}
-
-	.main-nav li {
-		display: inline-block;
-		font-size: 1em;
-		padding-top: 2.8em;
-	} */
-
 	.container {
 		width: 70%;
 	}
@@ -221,29 +213,13 @@ input[type="submit"] {
 	}
 
 	.room {
-		/* float: left;
-		max-width: 45%;
-		height: 400px;
-		padding-bottom: 200px; */
 		width: 40%;
 		margin: 1em 1.5em;
 	}
 
 	.room img {
 		max-width: 100%;
-		/*max-height: 30%;*/
 	}
-
-	/* .price div:nth-last-of-type(-n+2) {
-	background-color:#ff0000;
-	padding-bottom: 10px;
-	}
-
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
-	} */
 }
 
 @media (min-width: 960px){
@@ -253,7 +229,6 @@ input[type="submit"] {
 	header h1,
 	header nav {
 		width: 50%;
-		/* border: 1px solid blue; */
 	}
 
 	header h1 {
@@ -268,7 +243,6 @@ input[type="submit"] {
 
 	header nav a {
 		padding-left: 3em;
-		/* border: 1px solid green; */
 	}
 
 	main {
@@ -295,40 +269,28 @@ input[type="submit"] {
 		width: 40%;
 	}
 
-	.wrapper {
-		padding-left: 3em;
+	.price h2,
+	.price p{
+		width: 100%;
 	}
 
-	.welcome {
-		text-align: center;
-	}
-
-	.welcome h2,
-	.welcome p {
+	.price p{
 		text-align: justify;
 	}
 
 	.room {
-		max-width: 30%;
-	}
-
-	.room img {
-		max-width: 80%;
+		width: 30%;
+		margin: 1em;
 	}
 
 	.cform,
 	.loc_photo {
-		max-width: 50%;
-		float:left;
+		width: 40%;
+		margin: 0 1em;
 	}
 
-	.loc_photo img{
-		padding: 40px 40px 20px 40px;
-	}
-
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
+	.loc_photo p,
+	.loc_photo h4{
+		text-align: center;
 	}
 }
