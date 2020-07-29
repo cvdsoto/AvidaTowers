@@ -189,6 +189,7 @@ textarea {
 }
 
 input[type="submit"] {
+	font-family: 'Varela Round', sans-serif;
 	padding: 19px 39px 18px 39px;
 	color: #FFF;
 	background-color: #b42d33;
