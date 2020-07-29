@@ -13,11 +13,35 @@ header, footer {
 	color: white;
 }
 
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0.5em 0 2em 0;
+}
+
+header h1 {
+	width: 100%;
+}
+
+header nav {
+	display: flex;
+	justify-content: center;
+	width: 90%;
+}
+
+header a {
+	width: 30%;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
 h1, h2, footer{
 	text-align: center;
 }
 
-h1, h2 {
+h2 {
 	padding: .4em;
 }
 
@@ -71,19 +95,19 @@ button {
 	margin-bottom: 10px;
 }
 
-.main-header {
+/* .main-header {
 	background-color: #b42d33;
 	max-height: 100%;
 	margin-top:-1.5em;
-}
-
+} */
+/*
 .main-nav a {
 	display: block;
 	text-align: center;
 	padding: 10px 20px;
 	color: white;
 	text-transform: uppercase;
-}
+} */
 
 .landing {
 	margin: .5em;
