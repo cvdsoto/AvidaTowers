@@ -31,14 +31,14 @@ header nav {
 	margin-top: 1.5em;
 }
 
-header a {
+header nav a {
 	width: 30%;
 	text-align: center;
 	color: white;
 	text-transform: uppercase;
 }
 
-h1, h2, footer{
+h1, h2, h3, footer, .room_desc .sqm {
 	text-align: center;
 }
 
@@ -57,45 +57,7 @@ main {
 	flex-direction: column;
 }
 
-form {
-	max-width: 100%;
-	padding: 10px 20px;
-	position: relative;
-}
-
-label {
-	font-size: 1.2em;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-	margin-bottom: 15px;
-	width: 100%;
-	/*height: auto;*/
-	font-size: 1.125em;
-	border-radius: 5px;
-	border: none;
-	padding: 15px 5px;
-	background-color: #e8eeef;
-}
-
-button {
-	padding: 19px 39px 18px 39px;
-	/*color: #FFF;*/
-	/*background-color: #4bc970;*/
-	font-size: 1.4em;
-	text-align: center;
-	font-style: normal;
-	border-radius: 5px;
-	width: 100%;
-	border: 1px solid  #b42d33;
-	border-width: 1px 1px 3px;
-	/*box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;*/
-	margin-bottom: 10px;
-}
-
+/* Home page */
 .landing {
 	margin: .5em;
 }
@@ -147,31 +109,95 @@ button {
   text-align: center;
 }
 
-.welcome {
-	padding-top: 1em;
+/* atvita page */
+section {
+	margin-bottom: 2.5em;
 }
-
 section img {
 	padding-top: 1em;
 	max-width: 100%;
 }
 
-.room {
-	margin: 0 auto;
-	max-width: 50%;
+/* Welcome */
+.welcome {
+	padding-top: 1em;
+}
+
+/* Location */
+.loc_photo{
 	text-align: center;
+}
+
+/* Room */
+.price {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.room {
+	/* margin: 0 auto;
+	max-width: 50%;
+	text-align: center; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .room img {
-	max-width: 80%;
+	max-width: 60%;
 }
 
-.loc_photo{
+.room_desc p {
+	text-align: justify;
+}
+
+.room_desc .sqm {
+	margin-bottom: 1em;
+}
+
+/* Contact us */
+form {
+	max-width: 100%;
+	padding: 10px 20px;
+}
+
+label {
+	font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	margin-bottom: 15px;
+	width: 100%;
+	/*height: auto;*/
+	font-size: 1.125em;
+	border-radius: 5px;
+	border: none;
+	padding: 15px 5px;
+	background-color: #e8eeef;
+}
+
+input[type="submit"] {
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background-color: #b42d33;
+	font-size: 1.4em;
 	text-align: center;
-	}
+	font-style: normal;
+	border-radius: 5px;
+	width: 100%;
+	cursor: pointer;
+	border: 1px solid  #b42d33;
+	/* border-width: 1px 1px 3px; */
+	margin-bottom: 10px;
+}
 
 @media (min-width: 640px) {
-	h1 {
+	/* h1 {
 		text-align: left;
 		padding-left: 1em;
 	}
@@ -184,7 +210,7 @@ section img {
 		display: inline-block;
 		font-size: 1em;
 		padding-top: 2.8em;
-	}
+	} */
 
 	.container {
 		width: 70%;
@@ -195,19 +221,21 @@ section img {
 	}
 
 	.room {
-		float: left;
+		/* float: left;
 		max-width: 45%;
 		height: 400px;
-		padding-bottom: 200px;
+		padding-bottom: 200px; */
+		width: 40%;
+		margin: 1em 1.5em;
 	}
 
 	.room img {
-		max-width: 70%;
+		max-width: 100%;
 		/*max-height: 30%;*/
 	}
 
-	.price div:nth-last-of-type(-n+2) {
-	/*background-color:#ff0000;*/
+	/* .price div:nth-last-of-type(-n+2) {
+	background-color:#ff0000;
 	padding-bottom: 10px;
 	}
 
@@ -215,10 +243,34 @@ section img {
 		content: " ";
 		display: table;
 		clear: both;
-	}
+	} */
 }
 
 @media (min-width: 960px){
+	header {
+		padding: 1.5em 3em;
+	}
+	header h1,
+	header nav {
+		width: 50%;
+		/* border: 1px solid blue; */
+	}
+
+	header h1 {
+		text-align: left;
+	}
+
+	header nav {
+		margin-top: 0;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	header nav a {
+		padding-left: 3em;
+		/* border: 1px solid green; */
+	}
+
 	main {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -262,11 +314,6 @@ section img {
 
 	.room img {
 		max-width: 80%;
-	}
-
-	.price div:nth-last-of-type(-n+3) {
-		/*background-color:#ff0000;*/
-		padding-bottom: 50px;
 	}
 
 	.cform,
